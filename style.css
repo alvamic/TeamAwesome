@@ -1,0 +1,55 @@
+/* Header */
+.jumbotron {
+    background-color:rgba(0, 0, 0, 0);
+    color:white;
+    width:100%;
+    padding:0%;
+    margin:0%;   
+}
+
+.title,{
+    padding-top:5%;
+    font-family:inherit;
+    padding-left:5%;
+    
+
+}
+#header {
+    
+    background-color:black;
+    padding-left: 10%;
+    padding-right:10%;
+    background-image: url("https://coolbackgrounds.io/images/backgrounds/compute-83062381.png");
+    background-size:50%;
+    
+    
+}
+span {
+    color:white;
+}
+h3 {
+    color:white(28, 28, 235);
+    padding-top:5%;
+    padding-bottom:0%;
+    
+}
+#radar {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.nav-link, .nav-tabs {
+    font-size: 20px;
+    color:white;
+    font-family:inherit;
+    border-bottom:0px;
+}
+.twitter-follow-button {
+    margin-top:2%;
+}
+
+/* Body */
+.twitter-widget-1 {
+    max-height:550px;
+    overflow: hidden;
+}
