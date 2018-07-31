@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Places Search Box</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+  <script type="text/javascript" src="assets/app.js"></script>
 </head>
+
 <body>
-    
+  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+  <div id="map"></div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVOhYY8HkK0Goa5efXDus4h50LEVLep18&libraries=places&callback=initAutocomplete"
+    async defer></script>
 </body>
+
 </html>
