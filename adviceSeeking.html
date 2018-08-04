@@ -67,7 +67,7 @@
         </div>
       <div class="card-body">
 
-
+    <!--user input-->
     <div class="form-group">
         <label for="name">Name:</label>
         <input type="name" class="form-control" id="name">
@@ -82,7 +82,7 @@
 
     <div class="form-group">
             <label for="sel1">Number of people</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="people">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -95,21 +95,42 @@
        
         <!--CHECKBOX-->
    
-        <div class="checkbox">
-                <label><input type="checkbox" value="">I need housing</label>
+        <!-- <div class="checkbox">
+                <label><input type="checkbox" id="housing" value="">I need housing</label>
         </div>
-
+  
         <div class="checkbox">
-                <label><input type="checkbox" value="">I need food</label>
-        </div>
-
+                <label><input type="checkbox" id="food" value="">I need food</label>
+        </div> -->
+        <div class="form-group">
+            <label for="sel1">Housing</label>
+            <select class="form-control" id="housing">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div class="form-group">
+              <label for="sel1">Food</label>
+              <select class="form-control" id="food">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
         <div class="form-group">
                 <label for="comment">Notes:</label>
                 <textarea class="form-control" rows="5" id="comment"></textarea>
         </div>
 
+        <!--photo-->
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Upload photo</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+          </form>
+
         <!--SUBMIT-->
-        <a href="#" class="btn btn-primary">Submit</a>
+        <a href="#" id="submit" class="btn btn-primary">Submit</a>
 
      </div>
 
@@ -154,6 +175,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="firebase.js"></script>
 
 </body>
 </html>
