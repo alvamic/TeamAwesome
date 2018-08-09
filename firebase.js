@@ -23,6 +23,7 @@ $("#submit").on("click", function(event) {
  var numberOfPeople = $("#people").val().trim();
  var housing = $("#housing").val().trim();
  var food = $("#food").val().trim();
+ var notes = $("#notes").val().trim();
 
 
 
@@ -43,6 +44,8 @@ $("#submit").on("click", function(event) {
    numberOfPeople: numberOfPeople,
    food: food,
    housing: housing,
+   notes: notes,
+   
 
  };
 
@@ -55,6 +58,8 @@ $("#submit").on("click", function(event) {
  console.log(newPerson.numberOfPeople);
  console.log(newPerson.food);
  console.log(newPerson.housing);
+ console.log(newPerson.notes);
+
 
 
  alert("People can see your help message");
@@ -64,6 +69,8 @@ $("#submit").on("click", function(event) {
  $("#people").val("");
  $("#housing").val("");
  $("#food").val("");
+ $("#notes").val("");
+ 
 
 
 });
@@ -78,6 +85,8 @@ database.ref().on("child_added", function(childSnapshot) {
  var numberOfPeople = childSnapshot.val().numberOfPeople;
  var food = childSnapshot.val().food;
  var housing = childSnapshot.val().housing;
+ var notes=childSnapshot.val().notes;
+ 
 
  
 
@@ -87,18 +96,46 @@ database.ref().on("child_added", function(childSnapshot) {
  console.log(numberOfPeople);
  console.log(food);
  console.log(housing);
+ console.log(notes);
 
 
- 
+
+var profileButton;
  // Create the new row
  var newRow = $("<tr>").append(
    $("<td>").text(name),
    $("<td>").text(email),
    $("<td>").text(numberOfPeople),
    $("<td>").text(food),
-   $("<td>").text(housing)
+   $("<td>").text(housing),
+   profileButton= $("<button>"),
+   profileButton.text("Profile")
+   
+  //  $(profileButton).addClass("profile"),
+  //  $(".profile").text("Profile")
+
+  //  $(".profile").html("Profile")
+ 
  );
 
  // Append the new row to the table
  $("#person-table > tbody").append(newRow);
+
+
+ //Append info to profile page
+ $(".card-title-name").text(name)
+ $(".card-email").text(email)
+ $(".card-numberOfPeople").text("Number of people: " + numberOfPeople);
+ $(".card-text-notes").text(notes);
+ 
+
+
+ $(profileButton).click(function() {
+  window.location.href="profile.html"
+ });
+
 });
+
+
+
+
